@@ -13,10 +13,10 @@ services:
           - stub
 
   sgw:
-    image: ibmcom/secure-gateway-client
+    image: sg248351/sgw-sg248351
     depends_on:
       - stub
-    command: [3lbCuQT45x4_prod_ng, --sectoken, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiM2xiQ3VRVDQ1eDRfcHJvZF9uZyIsInJlZ2lvbiI6InVzLXNvdXRoIiwiaWF0IjoxNDczNjc5ODgxfQ.3rVzly0EA6aXvg0CIttDb4ABzVrJJc7CdWUDyyq1dMQ]
+    command: [3lbCuQT45x4_prod_ng, -F, /tmp/aclfile.txt, --sectoken, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiM2xiQ3VRVDQ1eDRfcHJvZF9uZyIsInJlZ2lvbiI6InVzLXNvdXRoIiwiaWF0IjoxNDczNjc5ODgxfQ.3rVzly0EA6aXvg0CIttDb4ABzVrJJc7CdWUDyyq1dMQ]
     networks:
       sc1-net:
         aliases:
