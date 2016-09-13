@@ -1,8 +1,13 @@
 version: '2'
+
 services:
-  stub:
-    image: sg248351/stub
+
+  iib-op:
+    image: sg248351/iibmq-onpremise
+    depends_on:
+      - sgc
     ports:
+      - "1414:1414"
       - "4414:4414"
       - "7800:7800"
     environment:
@@ -10,9 +15,35 @@ services:
     networks:
       sc1-net:
         aliases:
+          - iib
+
+  stub:
+    image: sg248351/stub
+    depends_on:
+      - orderdb
+    ports:
+      - "4414"
+      - "7800"
+    environment:
+      - LICENSE=accept
+    networks:
+      sc1-net:
+        aliases:
           - stub
 
-  sgw:
+  orderdb:
+    image: sg248351/orderdb
+    environment:
+      - LICENSE=accept
+    command: [db2start]
+    ports:
+      - "50000"
+    networks:
+      sc1-net:
+        aliases:
+          - mydb2
+
+  sgc:
     build: ./
     image: sg248351/secure-gateway-client
     depends_on:
@@ -21,7 +52,7 @@ services:
     networks:
       sc1-net:
         aliases:
-          - sgw
+          - sgc
 
 networks:
   sc1-net:
