@@ -14,3 +14,5 @@ Afterwards there should be 4 containers running with the following names:
 - orderdb
 - stub
 - sgc
+
+Verify which containers are running with the `docker-compose ps` command ran in the same directory location.
