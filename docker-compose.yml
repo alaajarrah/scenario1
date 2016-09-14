@@ -5,7 +5,7 @@ services:
   iib-op:
     image: sg248351/iibmq-onpremise
     depends_on:
-      - sgc
+      - orderdb
     ports:
       - "1414"
       - "4414"
@@ -20,8 +20,6 @@ services:
 
   stub:
     image: sg248351/stub
-    depends_on:
-      - orderdb
     ports:
       - "4414"
       - "7800"
@@ -45,10 +43,11 @@ services:
           - mydb2
 
   sgc:
-    build: ./
+    build: 99_docker/
     image: sg248351/secure-gateway-client
     depends_on:
       - stub
+      - iib-op
     #command: [3lbCuQT45x4_prod_ng, -F, /tmp/aclfile.txt, --sectoken, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiM2xiQ3VRVDQ1eDRfcHJvZF9uZyIsInJlZ2lvbiI6InVzLXNvdXRoIiwiaWF0IjoxNDczNjc5ODgxfQ.3rVzly0EA6aXvg0CIttDb4ABzVrJJc7CdWUDyyq1dMQ]
     command: ["${GWID}", -F, /tmp/aclfile.txt, --sectoken, "${SECTOKEN}"]
     networks:
