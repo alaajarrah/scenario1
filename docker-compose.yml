@@ -7,9 +7,10 @@ services:
     depends_on:
       - sgc
     ports:
-      - "1414:1414"
-      - "4414:4414"
-      - "7800:7800"
+      - "1414"
+      - "4414"
+#     - "4414:4414"
+      - "7800"
     environment:
       - LICENSE=${LICENSE}
     networks:
@@ -34,7 +35,7 @@ services:
   orderdb:
     image: sg248351/orderdb
     environment:
-      - LICENSE=accept
+      - LICENSE=${LICENSE}
     command: ["db2start"]
     ports:
       - "50000"
