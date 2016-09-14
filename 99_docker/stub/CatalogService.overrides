@@ -1,0 +1,5 @@
+gen.getProductList_Request_Response#File Read.inputDirectory = /tmp
+gen.getProductList_Request_Response#File Read.filenamePattern = products.xml
+gen.getProductList_Request_Response#Trace.filePath = /tmp/getList_Trace2.txt
+gen.getProduct_Request_Response#File Read.inputDirectory = /tmp
+gen.getProduct_Request_Response#File Read.filenamePattern = products.xml

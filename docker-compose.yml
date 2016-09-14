@@ -19,7 +19,8 @@ services:
           - iib
 
   stub:
-    image: sg248351/stub
+    build: 99_docker/stub/
+    image: sg248351/product-catalog-stub
     ports:
       - "4414"
       - "7800"
@@ -49,7 +50,7 @@ services:
       - stub
       - iib-op
     #command: [3lbCuQT45x4_prod_ng, -F, /tmp/aclfile.txt, --sectoken, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb25maWd1cmF0aW9uX2lkIjoiM2xiQ3VRVDQ1eDRfcHJvZF9uZyIsInJlZ2lvbiI6InVzLXNvdXRoIiwiaWF0IjoxNDczNjc5ODgxfQ.3rVzly0EA6aXvg0CIttDb4ABzVrJJc7CdWUDyyq1dMQ]
-    command: ["${GWID}", -F, /tmp/aclfile.txt, --sectoken, "${SECTOKEN}"]
+    command: ["${SC1_GWID}", -F, /tmp/aclfile.txt, --sectoken, "${SC1_SECTOKEN}"]
     networks:
       sc1-net:
         aliases:
