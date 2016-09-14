@@ -43,7 +43,7 @@ services:
           - mydb2
 
   sgc:
-    build: 99_docker/
+    build: 99_docker/sgc/
     image: sg248351/secure-gateway-client
     depends_on:
       - stub
