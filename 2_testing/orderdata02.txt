@@ -1,0 +1,9 @@
+{
+ "accountName":"AccountB",
+ "lineItems":[
+  {"productId":3,"quantity":5,"price":99}
+ ],
+  "total":495,
+ "status":"NEW",
+ "creationDate":"2016-10-20"
+}

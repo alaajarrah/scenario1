@@ -1,0 +1,11 @@
+{
+ "accountName":"AccountC",
+ "lineItems":[
+  {"productId":1,"quantity":1,"price":12},
+  {"productId":3,"quantity":10,"price":99}
+ ],
+  "total":1002,
+ "status":"NEW",
+ "creationDate":"2016-11-01",
+ "campaignId":"Winter Sale"
+}
