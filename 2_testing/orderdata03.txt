@@ -1,8 +1,8 @@
 {
  "accountName":"AccountC",
  "lineItems":[
-  {"productId":1,"quantity":1,"price":12},
-  {"productId":3,"quantity":10,"price":99}
+  {"productId":12345,"quantity":1,"price":12},
+  {"productId":12347,"quantity":10,"price":99}
  ],
   "total":1002,
  "status":"NEW",
