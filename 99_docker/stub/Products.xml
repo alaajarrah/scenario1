@@ -1,5 +1,5 @@
 <Products>
-<Product><ProductID>Flu001</ProductID><ProductName>Drugstore Special</ProductName><Description>Fever Pills</Description><SKU>1234-567-8</SKU><ListPrice>$12</ListPrice></Product>
-<Product><ProductID>Flu002</ProductID><ProductName>Pharmacists' Delight</ProductName><Description>Anti-Inflammatory</Description><SKU>1236-889-7</SKU><ListPrice>$45</ListPrice></Product>
-<Product><ProductID>Flu003</ProductID><ProductName>Prescription Star</ProductName><Description>Nasal Spray</Description><SKU>1237-455-3</SKU><ListPrice>$99</ListPrice></Product>
+<Product><ProductID>12345</ProductID><ProductName>Drugstore Special</ProductName><Description>Fever Pills</Description><SKU>1234-567-8</SKU><ListPrice>12</ListPrice></Product>
+<Product><ProductID>12346</ProductID><ProductName>Pharmacists' Delight</ProductName><Description>Anti-Inflammatory</Description><SKU>1236-889-7</SKU><ListPrice>45</ListPrice></Product>
+<Product><ProductID>12347</ProductID><ProductName>Prescription Star</ProductName><Description>Nasal Spray</Description><SKU>1237-455-3</SKU><ListPrice>99</ListPrice></Product>
 </Products>
